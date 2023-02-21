@@ -1,8 +1,9 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom'
+import Home from './components/Home/Home';
 import PaginaError from './components/PaginaError/PaginaError'
-// import axios from 'axios';
-// axios.defaults.baseURL = 'https://pi-production.up.railway.app/';
+import axios from 'axios';
+axios.defaults.baseURL = 'https://portfolio-fabian.up.railway.app/';
 
 function App() {
   return (
