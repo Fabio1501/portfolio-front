@@ -5,11 +5,7 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {
-      backgroundImage: {
-        'hero-pattern': "url('https://i.postimg.cc/1RdvhmsT/portfolio-imagen-cerros.jpg')",
-      }
-    },
+    extend: {},
   },
   plugins: [],
 }
