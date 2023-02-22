@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getSection } from '../../redux/actions/index';
+import LoaderHome from './LoaderHome';
 
 const Home = () => {
     const section = useSelector(state => state.section);
@@ -15,14 +16,11 @@ const Home = () => {
             {
                 Object.keys(section).length > 0 ? 
                 <div>
-                    {console.log(section)}
                     {
                         section.info.Images?.map(prop => <img src={prop.src} alt = {prop.alt} key = {prop.id}/>)
                     }
                 </div> :
-                <h3 className=''>
-                    hola  
-                </h3>
+                <LoaderHome/>
             }
         </div>
     );
