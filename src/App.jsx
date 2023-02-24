@@ -1,9 +1,15 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom'
 import Home from './components/Home/Home';
+import SobreMi from './components/SobreMi/SobreMi';
+import Proyectos from './components/Proyectos/Proyectos';
+import Contacto from './components/Contacto/Contacto';
+import Curriculum from './components/Curriculum/Curriculum';
+import Habilidades from './components/Habilidades/Habilidades';
 import PaginaError from './components/PaginaError/PaginaError'
 import axios from 'axios';
-axios.defaults.baseURL = 'https://portfolio-fabian.up.railway.app/';
+// axios.defaults.baseURL = 'https://portfolio-fabian.up.railway.app/';
+axios.defaults.baseURL = 'http://localhost:3001/';
 
 function App() {
   return (
@@ -12,26 +18,38 @@ function App() {
         <Route
           exact
           path='/'
-          element = {<PaginaError/>}
-        />
-
-        {/* <Route
-          exact
-          path='/recipes'
-          element = {<Recipes/>}
+          element = {<Home/>}
         />
 
         <Route
           exact
-          path='/recipes/:id'
-          element = {<RecipeDetails/>}
+          path='/sobremi'
+          element = {<SobreMi/>}
         />
 
         <Route
           exact
-          path='/recipes/create'
-          element = {<RecipeCreate/>}
-        /> */}
+          path='/proyectos'
+          element = {<Proyectos/>}
+        />
+
+        <Route
+          exact
+          path='/contacto'
+          element = {<Contacto/>}
+        />
+
+        <Route
+          exact
+          path='/curriculum'
+          element = {<Curriculum/>}
+        />
+
+        <Route
+          exact
+          path='/habilidades'
+          element = {<Habilidades/>}
+        />
       </Routes>
     </div>
   )
