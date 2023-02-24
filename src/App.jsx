@@ -18,7 +18,7 @@ function App() {
         <Route
           exact
           path='/'
-          element = {<Home/>}
+          element = {<PaginaError/>}
         />
 
         <Route
