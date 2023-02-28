@@ -1,7 +1,8 @@
-import {GET_SECTION} from '../utils'
+import {GET_SECTION, GET_STATICCOMPONENTS} from '../utils'
 
 const initialState = {
-    section: {}
+    section: {},
+    staticComponents : {}
 }
 
 const rootReducer = (state = initialState, action)=>{
@@ -10,7 +11,13 @@ const rootReducer = (state = initialState, action)=>{
             return {
                 ...state,
                 section: action.payload,
-            }            
+            }  
+            
+        case GET_STATICCOMPONENTS:
+            return {
+                ...state,
+                staticComponents : action.payload
+            }
         default:
             return state;
     }

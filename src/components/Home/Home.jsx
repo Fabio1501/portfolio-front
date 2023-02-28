@@ -63,7 +63,7 @@ const Home = () => {
     const customInfoPresentation = () => {
         const images = section?.info?.Images?.filter(img => img.name === 'Presentacion');
         const texts = section?.info?.Texts?.filter(text => text.name === 'Presentacion');       
-                 console.log(images);
+
         //type urls and images: redes
         return {
             image: images[0],
@@ -73,19 +73,19 @@ const Home = () => {
     };
 
     return (
-        <div className="bg-[url('https://i.postimg.cc/K89f7Nq8/portfolio-imagen-bosque-y-cascada.jpg')] bg-no-repeat bg-cover bg-center w-full h-full grid-rows-1 grid-cols-2 absolute">
+        <div className="bg-[url('https://i.postimg.cc/K89f7Nq8/portfolio-imagen-bosque-y-cascada.jpg')] bg-no-repeat bg-cover bg-top w-full h-fit flex flex-col justify-end">
             {
                 Object.keys(section).length > 0 ? 
-                <div className='w-full h-full flex justify-evenly items-center absolute'>
+                <div className='w-full h-full flex justify-evenly items-center'>
                     <NavBarHome infoNav = { customInfoNav() }/>
                     <Presentation infoPresentation = {customInfoPresentation()}/>
                 </div> :
-                <div className='w-full h-full flex justify-evenly items-center absolute'>
+                <div className='bg-white w-full h-full flex justify-evenly items-center absolute'>
                     <LoaderHome comp = 'navBar'/>
                     <LoaderHome comp = 'presentation'/>
                 </div>
             }
-            {/* <Footer/> */}
+            <Footer/>
         </div>
     );
 }

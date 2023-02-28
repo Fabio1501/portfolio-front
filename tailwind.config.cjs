@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       colors: {
         'first-color': '#3BFE0B',
+        'second-color' : '#62615F'
       },
       boxShadow: {
         '3-xl' : '0 20px 25px -14px rgba(0, 0, 0, 0.5)'
