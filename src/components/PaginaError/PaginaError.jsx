@@ -1,7 +1,7 @@
 import CountdownTimer from "./CuentaRegresiva";
 
 function PaginaError() {
-    const targetDate = new Date('2023-03-01T17:30:00Z');
+    const targetDate = new Date('2023-03-03T17:30:00Z');
 
     return (
         <div className="bg-[url('https://i.postimg.cc/1RdvhmsT/portfolio-imagen-cerros.jpg')] bg-no-repeat bg-cover bg-center w-full h-full flex justify-center items-center absolute">

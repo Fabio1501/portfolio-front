@@ -28,7 +28,7 @@ function CountdownTimer({ targetDate }) {
   return (
     <div className='mt-4'>
       <h3 className='text-3xl font-bold'>
-        {timeRemaining.hours}:{timeRemaining.minutes}:{timeRemaining.seconds}
+      {timeRemaining.days}:{timeRemaining.hours}:{timeRemaining.minutes}:{timeRemaining.seconds}
       </h3>
     </div>
   );
