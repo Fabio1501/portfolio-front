@@ -34,7 +34,7 @@ const SobreMi = () => {
             });
         });  
         return {
-            sectionOneAtFour: sectionOneAtFour.reverse(),
+            sectionOneAtFour: sectionOneAtFour.sort((a, b) => a.text.name.localeCompare(b.text.name)),
             sectionFive : sectionFive[0],
             title : title[0]
         }

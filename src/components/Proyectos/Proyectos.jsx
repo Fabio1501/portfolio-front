@@ -82,7 +82,7 @@ const Proyectos = () => {
                             image : image,
                             parrafo : parrafo,
                             title : title,
-                            buttons: btnsPF
+                            buttons: btnsPF.reverse()
                         };
                         
                         proyectos.push(mergedObj);

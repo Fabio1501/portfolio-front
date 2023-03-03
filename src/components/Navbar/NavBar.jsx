@@ -28,10 +28,10 @@ const NavBar = () => {
                     {staticComponents.navBar.sectionsNavBar.map(seccion => {
                         return (
                             <Link className='flex items-center justify-start mb-6' to={seccion.url.href}>
-                                <img className='w-7 mr-12' src={seccion.image.src}/>
-                                <div className='text-white text-center text-lg hover:text-[#3BFE0B]'>
+                                <img className='w-7 mr-6' src={seccion.image.src}/>
+                                <p className='under'>
                                     {seccion.text.name}
-                                </div>
+                                </p>
                             </Link>
                         )
                     })}   

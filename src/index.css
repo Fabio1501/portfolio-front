@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .under {
+      @apply relative ml-10 text-lg text-white hover:text-[#F9F9F9]
+    }
+    .under::after{
+        @apply content-[''] bg-[#3BFE0B] h-[2px] w-[0%] left-0 -bottom-[5px] rounded-xl absolute duration-300
+    }
+    .under:hover::after{
+        @apply w-full
+    }
+}
