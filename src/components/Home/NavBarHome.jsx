@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const NavBarHome = ({infoNav}) => {
 
     return (
-        <div className='w-80 bg-zinc-700/60 p-8 mr-32 rounded-lg shadow-[0_20px_25px_-14px_rgba(0,0,0,0.5)]'>
+        <div className='w-1/4 bg-zinc-700/60 p-8 mr-32 rounded-lg shadow-[0_20px_25px_-14px_rgba(0,0,0,0.5)]'>
             <div className='m-auto w-36'>
                 {
                     <Link to={infoNav.logo.url.href}>

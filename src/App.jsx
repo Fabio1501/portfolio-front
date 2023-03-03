@@ -8,8 +8,8 @@ import Curriculum from './components/Curriculum/Curriculum';
 import Habilidades from './components/Habilidades/Habilidades';
 import PaginaError from './components/PaginaError/PaginaError'
 import axios from 'axios';
-// axios.defaults.baseURL = 'https://portfolio-fabian.up.railway.app/';
-axios.defaults.baseURL = 'http://localhost:3001/';
+axios.defaults.baseURL = 'https://portfolio-back-fabian.up.railway.app/';
+// axios.defaults.baseURL = 'http://localhost:3001/';
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
         <Route
           exact
           path='/'
-          element = {<PaginaError/>}
+          element = {<Home/>}
         />
 
         <Route
@@ -30,19 +30,19 @@ function App() {
         <Route
           exact
           path='/proyectos'
-          element = {<Proyectos/>}
+          element = {<PaginaError/>}
         />
 
         <Route
           exact
           path='/contacto'
-          element = {<Contacto/>}
+          element = {<PaginaError/>}
         />
 
         <Route
           exact
           path='/curriculum'
-          element = {<Curriculum/>}
+          element = {<PaginaError/>}
         />
 
         <Route

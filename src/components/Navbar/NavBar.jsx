@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { getStaticComponents } from '../../redux/actions/index';
+import LoaderHome from '../Home/LoaderHome';
 
 const NavBar = () => {
     const staticComponents = useSelector(state => state.staticComponents);
@@ -16,7 +17,6 @@ const NavBar = () => {
             {
             Object.keys(staticComponents).length > 0 ? 
             <div className='self-center w-full'>
-                {console.log(staticComponents)}
                 <div className='m-auto w-36'>
                     {
                         <Link to={staticComponents.navBar.logoNavBar.url.href}>
@@ -24,7 +24,7 @@ const NavBar = () => {
                         </Link>
                     }
                 </div>
-                <nav className='mb-16 mt-16'>
+                <nav className='mb-20 mt-20'>
                     {staticComponents.navBar.sectionsNavBar.map(seccion => {
                         return (
                             <Link className='flex items-center justify-start mb-6' to={seccion.url.href}>
@@ -48,7 +48,7 @@ const NavBar = () => {
                     }
                 </div> 
             </div>:
-            <h1>Loading</h1>
+                <LoaderHome comp = 'navBar'/>
             }
         </div>
     );

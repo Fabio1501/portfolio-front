@@ -2,25 +2,27 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getSection } from '../../redux/actions/index';
 import SobreMiSection from './SobreMiSection';
-import LoaderHome from '../Home/LoaderHome';
+import LoaderSobreMi from './LoaderSobreMi';
 import Footer from '../Footer/Footer'
 import NavBar from '../Navbar/NavBar';
+import LoaderHome from '../Home/LoaderHome';
 
 const SobreMi = () => {
     const section = useSelector(state => state.section);
     const dispatch = useDispatch();
 
     useEffect(()=>{
-        dispatch(getSection('sobre mi'));
+        dispatch(getSection());
     }, []);
 
     const customSobreMi = () => {
+        let sectionSobreMi = section?.info?.filter(sec => sec.name === 'sobre mi')
         let sectionOneAtFour = []
-        let sectionFive = section?.info?.Texts?.filter(text => text.name === 'sobremi5');
-        let title = section?.info?.Texts?.filter(text => text.name === 'titulo');
+        let sectionFive = sectionSobreMi[0]?.Texts?.filter(text => text.name === 'sobremi5');
+        let title = sectionSobreMi[0]?.Texts?.filter(text => text.name === 'tituloSobreMi');
 
-        section?.info?.Texts?.filter(text => text.name.includes('sobremi')).forEach((text) => {
-            section?.info?.Images?.filter(img => img.name.includes('sobremi')).forEach((image) => {
+        sectionSobreMi[0]?.Texts?.filter(text => text.name.includes('sobremi')).forEach((text) => {
+            sectionSobreMi[0]?.Images?.filter(img => img.name.includes('sobremi')).forEach((image) => {
                 if (image.name === text.name) {
                     const mergedObj = {
                         text : text,
@@ -48,17 +50,22 @@ const SobreMi = () => {
                     </div>
                     <div className="col-span-12 p-16 sm:col-span-9">
                         <SobreMiSection customSobreMi={customSobreMi()}/>
+                        <Footer/>
+                    </div>
+                </section>
+                :
+                <section className="mx-auto grid grid-cols-12 bg-[#62615F]">
+                    <div className="col-span-12 sm:col-span-3">
+                        <LoaderHome comp = 'navBar'/>
+                    </div>
+                    <div className="col-span-12 p-16 sm:col-span-9">
+                        <LoaderSobreMi />
                     </div>
                     <div className="col-span-12 sm:col-start-4 sm:col-end-14">
                         {/* <!-- Footer content --> */}
                         <Footer/>
                     </div>
                 </section>
-                :
-                <div className='w-full h-full flex justify-evenly items-center absolute'>
-                    <LoaderHome comp = 'navBar'/>
-                    <LoaderHome comp = 'presentation'/>
-                </div>
                 }
         </div>
     );

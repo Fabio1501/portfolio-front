@@ -3,21 +3,29 @@ import {GET_SECTION, GET_STATICCOMPONENTS} from '../utils'
 
 export const getSection = (name) => {
     return async (dispatch)=>{
-        if(!name){
-            let section = await axios('/sections');
-            console.log(section.data);
+        try {
+            if(!name){
+                console.log('hasj');
+                let section = await axios('/sections');
+                return await dispatch({
+                    type: GET_SECTION,
+                    payload: section.data
+                })
+            }
+    
+            let section = await axios(`/sections/name?name=${name}`);
+            console.log('hasj');
+            
             return await dispatch({
                 type: GET_SECTION,
                 payload: section.data
             })
+        } catch (error) {
+            return await dispatch({
+                type: GET_SECTION,
+                payload: error.response.data
+            })
         }
-
-        let section = await axios(`/sections/name?name=${name}`);
-        
-        return await dispatch({
-            type: GET_SECTION,
-            payload: section.data
-        })
     }
 }
 

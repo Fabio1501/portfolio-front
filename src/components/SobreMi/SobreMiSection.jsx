@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 const SobreMiSection = ({customSobreMi}) => {
 
     return (
-        <article className='w-full flex-col items-center justify-center'>
+        <article className='w-full flex-col items-center justify-center mb-24'>
             <h2 className='mb-24 text-4xl font-semibold text-center text-white'>{customSobreMi.title.content}</h2>
             <main className='w-full flex-col'>
                 {

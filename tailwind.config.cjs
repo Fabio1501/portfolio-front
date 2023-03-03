@@ -12,6 +12,9 @@ module.exports = {
       },
       boxShadow: {
         '3-xl' : '0 20px 25px -14px rgba(0, 0, 0, 0.5)'
+      },
+      brightness: {
+        25: '.8'
       }
     },
   },
