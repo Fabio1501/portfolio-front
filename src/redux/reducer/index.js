@@ -1,8 +1,9 @@
-import {GET_SECTION, GET_STATICCOMPONENTS} from '../utils'
+import {GET_SECTION, GET_STATICCOMPONENTS, SEND_MESSAGE} from '../utils'
 
 const initialState = {
     section: {},
-    staticComponents : {}
+    staticComponents : {},
+    message : {}
 }
 
 const rootReducer = (state = initialState, action)=>{
@@ -17,6 +18,12 @@ const rootReducer = (state = initialState, action)=>{
             return {
                 ...state,
                 staticComponents : action.payload
+            }
+
+        case SEND_MESSAGE:
+            return {
+                ...state,
+                message : action.payload
             }
         default:
             return state;

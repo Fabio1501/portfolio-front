@@ -36,7 +36,7 @@ function App() {
         <Route
           exact
           path='/contacto'
-          element = {<PaginaError/>}
+          element = {<Contacto/>}
         />
 
         <Route

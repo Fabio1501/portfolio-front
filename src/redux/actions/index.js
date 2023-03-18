@@ -1,11 +1,10 @@
 import axios from 'axios';
-import {GET_SECTION, GET_STATICCOMPONENTS} from '../utils'
+import {GET_SECTION, GET_STATICCOMPONENTS, SEND_MESSAGE} from '../utils'
 
 export const getSection = (name) => {
     return async (dispatch)=>{
         try {
             if(!name){
-                console.log('hasj');
                 let section = await axios('/sections');
                 return await dispatch({
                     type: GET_SECTION,
@@ -14,7 +13,6 @@ export const getSection = (name) => {
             }
     
             let section = await axios(`/sections/name?name=${name}`);
-            console.log('hasj');
             
             return await dispatch({
                 type: GET_SECTION,
@@ -62,7 +60,6 @@ export const getStaticComponents = () => {
           }
         });
     }); 
-    console.log(navBar[0]?.Urls);
     navBar[0]?.Urls?.filter(url => url.type === 'redirect').forEach((url) =>{
         navBar[0]?.Images?.filter(img => img.type === 'redes').forEach((image) => {
             if (image.name === url.name) {
@@ -120,5 +117,25 @@ export const getStaticComponents = () => {
         type: GET_STATICCOMPONENTS,
         payload: data
     })
+    }
+}
+
+export const sendMessage = (body) => {
+    return async (dispatch) => {
+        try {
+            let info = await axios.post("https://formsubmit.co/ajax/fabiuuu8@gmail.com", body)
+            
+            return await dispatch({
+                type: SEND_MESSAGE,
+                payload: info.data
+            })
+            
+        } catch (error) {
+            console.log('asda');
+            return await dispatch({
+                type: SEND_MESSAGE,
+                payload: {}
+            })
+        }
     }
 }

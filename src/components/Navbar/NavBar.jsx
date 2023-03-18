@@ -13,7 +13,7 @@ const NavBar = () => {
     }, []);
 
     return (
-        <div className='h-screen sticky flex flex-col items-center justify-center top-0 left-0 bg-zinc-700 p-8'>
+        <div className='h-screen sticky flex flex-col items-center justify-center top-0 left-0 bg-[#2f4f4f] p-8'>
             {
             Object.keys(staticComponents).length > 0 ? 
             <div className='self-center w-full'>

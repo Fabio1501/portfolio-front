@@ -17,7 +17,7 @@ const Footer = () => {
             {
                 Object.keys(staticComponents).length > 0 ?
                 <div class="w-full mx-auto">
-                    <footer class="p-4 md:px-6 md:py-8">
+                    <footer class="px-6">
                         <div class="flex items-center justify-evenly">
                             <Link href={staticComponents.footer.logo.url.href} class="flex items-center mb-4 sm:mb-0 hover:cursor-pointer">
                                 <img src={staticComponents.footer.logo.image.src} className="mr-8 h-10" alt={staticComponents.footer.logo.image.alt} />
