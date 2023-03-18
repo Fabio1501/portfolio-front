@@ -3,7 +3,7 @@ import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import axios from 'axios';
 import './QuillModules';
-import Alert from "../../Components/Alertas/Alert.jsx";
+import Alert from "../Alertas/Alert";
 
 const ContactoSection = ({customContacto}) => {
     const [values, setValues] = useState({
