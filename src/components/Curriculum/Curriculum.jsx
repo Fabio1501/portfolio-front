@@ -5,6 +5,7 @@ import LoaderHome from '../Home/LoaderHome';
 import NavBar from '../Navbar/NavBar';
 import { getSection } from '../../redux/actions/index';
 import ViewPDF from './ViewPDF';
+import ViewPdfs from './ViewPdfs';
 import NavFixed from './NavFixed';
 
 const Curriculum = () => {
@@ -25,7 +26,8 @@ const Curriculum = () => {
                     </div>
                     <div className="col-span-12 p-8 pr-40 sm:col-span-9">
                         {/* visualizador de PDF */}
-                        <ViewPDF/>
+                        {/* <ViewPDF/> */}
+                        <ViewPdfs/>
                         <NavFixed/>
                         <Footer/>
                     </div>

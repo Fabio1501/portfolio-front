@@ -137,7 +137,7 @@ const NavFixed = () => {
                 </button>
                 
             </div>
-            <button type="button" onClick={hiddenFunctions} className="flex items-center justify-center text-white bg-[#3BFE0B] rounded-full w-16 h-16 hover:bg-[#3BFE0B] dark:bg-[#3BFE0B]/50 dark:hover:bg-[#3BFE0B] focus:ring-4 focus:white focus:outline-none dark:focus:[#3BFE0B]">
+            <button type="button" onClick={hiddenFunctions} className="flex cursor-pointer items-center justify-center text-white bg-[#3BFE0B] rounded-full w-16 h-16 hover:bg-[#3BFE0B] dark:bg-[#3BFE0B]/50 dark:hover:bg-[#3BFE0B] focus:ring-4 focus:white focus:outline-none dark:focus:[#3BFE0B]">
                 <svg aria-hidden="true" id="equis" className="w-12 h-12 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
                 <span className="sr-only">Open actions menu</span>
             </button>
