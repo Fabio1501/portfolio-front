@@ -85,6 +85,9 @@ const ContactoSection = ({customContacto}) => {
                         text: "No lo olvides, eres una persona maravillosa! :)",
                         icon: "success",
                     });
+
+                    await axios.post("/email", {email: values.emailContacto})
+
                     setValues({
                         emailContacto: '',
                         asuntoContacto : '',

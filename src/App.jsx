@@ -42,7 +42,7 @@ function App() {
         <Route
           exact
           path='/curriculum'
-          element = {<PaginaError/>}
+          element = {<Curriculum/>}
         />
 
         <Route
