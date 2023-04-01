@@ -8,7 +8,7 @@ function ViewPDF() {
   return (
     <div className='bg-[#57792B]'>
         <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">
-            <Viewer fileUrl="src/assets/CV_Fabian.pdf"/>;
+            <Viewer fileUrl="./src/assets/CV_Fabian.pdf"/>;
         </Worker>
     </div>
   );
