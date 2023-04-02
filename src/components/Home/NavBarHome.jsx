@@ -12,7 +12,7 @@ const NavBarHome = ({infoNav}) => {
                     </Link>
                 }
             </div>
-            <nav className='mb-16 mt-16'>
+            <nav className='mb-10 mt-10'>
                 {infoNav.secciones.map(seccion => {
                     return (
                         <Link className='flex items-center justify-start mb-6' to={seccion.url.href}>

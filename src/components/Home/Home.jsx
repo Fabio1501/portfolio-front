@@ -17,7 +17,6 @@ const Home = () => {
 
     const customInfoNav = () => {
         let sectionHome = section?.info?.filter(sec => sec.name === 'home') 
-        console.log(sectionHome[0]);
         const images = sectionHome[0]?.Images?.filter(img => img.type === 'icon');
         const urls = sectionHome[0]?.Urls?.filter(url => url.type === 'local');
         const texts = sectionHome[0]?.Texts?.filter(text => text.type === 'link');

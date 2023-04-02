@@ -6,6 +6,7 @@ import Proyectos from './components/Proyectos/Proyectos';
 import Contacto from './components/Contacto/Contacto';
 import Curriculum from './components/Curriculum/Curriculum';
 import Habilidades from './components/Habilidades/Habilidades';
+import Experiencia from './components/Experiencia/Experiencia';
 import PaginaError from './components/PaginaError/PaginaError'
 import axios from 'axios';
 axios.defaults.baseURL = 'https://portfolio-back-fabian.up.railway.app/';
@@ -49,6 +50,12 @@ function App() {
           exact
           path='/habilidades'
           element = {<Habilidades/>}
+        />
+
+        <Route
+          exact
+          path='/experiencia'
+          element = {<PaginaError/>}
         />
       </Routes>
     </div>
