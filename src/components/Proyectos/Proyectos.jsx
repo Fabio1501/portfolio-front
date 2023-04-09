@@ -5,6 +5,7 @@ import LoaderHome from '../Home/LoaderHome';
 import Footer from '../Footer/Footer'
 import NavBar from '../Navbar/NavBar';
 import SectionProyectos from './SectionProyectos';
+import NavBarMobile from '../Navbar/NavBarMobile';
 
 
 const Proyectos = () => {
@@ -65,7 +66,6 @@ const Proyectos = () => {
                             title : title,
                             buttons: btnsPI
                         };
-                        console.log(mergedObj);
                         proyectos.push(mergedObj);
                     }
                     });
@@ -124,8 +124,9 @@ const Proyectos = () => {
                 <section className="mx-auto grid grid-cols-12 bg-[#57792B]">
                     <div className="col-span-12 sm:col-span-3">
                         <NavBar/>
+                        <NavBarMobile/>
                     </div>
-                    <div className="col-span-12 p-16 sm:col-span-9">
+                    <div className="col-span-12 p-6 xl:p-16 sm:col-span-9">
                         <SectionProyectos customProyectos={ customProyectos() }/>
                         <Footer/>
                     </div>

@@ -5,6 +5,7 @@ import LoaderHome from '../Home/LoaderHome';
 import Footer from '../Footer/Footer'
 import NavBar from '../Navbar/NavBar';
 import SectionHabilidades from './SectionHabilidades'
+import NavBarMobile from '../Navbar/NavBarMobile';
 const Habilidades = () => {
     const section = useSelector(state => state.section);
     const dispatch = useDispatch();
@@ -65,8 +66,9 @@ const Habilidades = () => {
                 <section className="mx-auto grid grid-cols-12 bg-[#57792B]">
                     <div className="col-span-12 sm:col-span-3">
                         <NavBar/>
+                        <NavBarMobile/>
                     </div>
-                    <div className="col-span-12 p-16 sm:col-span-9">
+                    <div className="col-span-12 p-4 xl:p-16 sm:col-span-9">
                         <SectionHabilidades customHabilidades = {customHabilidades()}/>
                         <Footer/>
                     </div>

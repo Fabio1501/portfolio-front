@@ -5,6 +5,7 @@ import LoaderHome from '../Home/LoaderHome';
 import { useDispatch, useSelector } from 'react-redux';
 import { getSection } from '../../redux/actions/index';
 import ContactoSection from './ContactoSection';
+import NavBarMobile from '../Navbar/NavBarMobile';
 
 const Contacto = () => {
 
@@ -85,8 +86,9 @@ const Contacto = () => {
                 <section className="mx-auto grid grid-cols-12 bg-[#57792B]">
                     <div className="col-span-12 sm:col-span-3">
                         <NavBar/>
+                        <NavBarMobile/>
                     </div>
-                    <div className="col-span-12 p-16 sm:col-span-9">
+                    <div className="col-span-12 p-8 xl:p-16 sm:col-span-9">
                         <ContactoSection customContacto = {customContacto()}/>
                         <Footer/>
                     </div>

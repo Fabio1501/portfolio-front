@@ -6,6 +6,7 @@ import LoaderSobreMi from './LoaderSobreMi';
 import Footer from '../Footer/Footer'
 import NavBar from '../Navbar/NavBar';
 import LoaderHome from '../Home/LoaderHome';
+import NavBarMobile from '../Navbar/NavBarMobile';
 
 const SobreMi = () => {
     const section = useSelector(state => state.section);
@@ -44,11 +45,12 @@ const SobreMi = () => {
         <div>
             {
                 Object.keys(section).length > 0 ? 
-                <section className="mx-auto grid grid-cols-12 bg-[#57792B]">
-                    <div className="col-span-12 sm:col-span-3">
+                <section className="xl:mx-auto xl:grid xl:grid-cols-12 bg-[#57792B]">
+                    <div className="flex xl:block xl:col-span-3">
+                        <NavBarMobile/>
                         <NavBar/>
                     </div>
-                    <div className="col-span-12 p-16 sm:col-span-9">
+                    <div className="p-8 xl:p-16 xl:col-span-9">
                         <SobreMiSection customSobreMi={customSobreMi()}/>
                         <Footer/>
                     </div>

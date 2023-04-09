@@ -6,6 +6,8 @@ import NavBarHome from './NavBarHome';
 import Presentation from './Presentation';
 import Footer from '../Footer/Footer';
 import LoaderFooter from '../Footer/Footer';
+import { InlineWidget, PopupWidget, PopupButton } from "react-calendly";
+import NavBarMobile from '../Navbar/NavBarMobile';
 
 const Home = () => {
     const section = useSelector(state => state.section);
@@ -76,15 +78,22 @@ const Home = () => {
     };
 
     return (
-        <div className="bg-[url('https://i.postimg.cc/K89f7Nq8/portfolio-imagen-bosque-y-cascada.jpg')] bg-no-repeat bg-cover bg-top w-full h-fit flex flex-col justify-end">
+        <div className="xl:bg-[url('https://i.postimg.cc/K89f7Nq8/portfolio-imagen-bosque-y-cascada.jpg')] xl:bg-no-repeat xl:bg-cover xl:bg-top w-full xl:h-fit flex flex-col justify-end h-screen bg-[#2f4f4f]">
             {
                 Object.keys(section).length > 0 && section.containsError === false ? 
                 <div className='w-full h-full flex flex-col justify-evenly items-center'>
-                    <div className='w-full flex justify-evenly items-center'>
+                    <div className='w-full flex flex-col xl:flex-row justify-evenly items-center'>
                         <NavBarHome infoNav = { customInfoNav() }/>
+                        <NavBarMobile/>
                         <Presentation infoPresentation = {customInfoPresentation()}/>
                     </div>
-                   <Footer/>
+                    <PopupWidget
+                        url="https://calendly.com/fabiancarabajal"
+                        rootElement={document.getElementById("root")}
+                        text="¡Agenda una reunión!"
+                        textColor="#2f4f4f"
+                        color="#3BFE0B"
+                    />
                 </div> :
                 <div className='bg-white w-full h-full flex flex-col justify-center items-center'>
                     <div className='w-full flex justify-evenly items-center'>

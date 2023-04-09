@@ -3,13 +3,11 @@ import pdfFab from '../../assets/CV_Fabian.pdf'
 function ViewPdfs() {
     // const defaultLayoutPluginInstance = defaultLayoutPlugin();
   return (
-    <div className='bg-[#57792B]'>
+    <div className='bg-[#57792B] mt-16'>
          <object
         data={pdfFab}
         type="application/pdf"
-        width="100%"
-        height="900px"
-        className='mb-24'
+        className='xl:mb-24 mb-6 w-full h-[400px] xl:h-[800px]'
         >
         </object>
     </div>

@@ -115,11 +115,11 @@ const ContactoSection = ({customContacto}) => {
     }
 
     return (
-        <section className='w-full flex-col items-center justify-center mb-24'>
-            <h2 className='mb-24 text-4xl font-semibold text-center text-white underline'>{customContacto.title.content}</h2>
+        <section className='w-full flex-col items-center justify-center mb-6 xl:mb-24 mt-16'>
+            <h2 className='mb-12 xl:mb-24 xl:text-4xl text-2xl font-semibold text-center text-white underline'>{customContacto.title.content}</h2>
             
-            <article className='w-full flex items-center justify-between mt-16'>
-                <form onSubmit={handleSubmit} className = 'w-2/3 flex flex-col space-around items-center gap-8'>
+            <article className='w-full flex items-center justify-between xl:mt-16'>
+                <form onSubmit={handleSubmit} className = 'w-full xl:w-2/3 flex flex-col space-around items-center gap-8'> 
                     <h3 className='text-xl text-white text-center'>{customContacto.form.subtitle.content}</h3>
                     {
                         customContacto.form.inputs.map(inp => {
@@ -146,12 +146,12 @@ const ContactoSection = ({customContacto}) => {
                             )
                         })
                     }
-                    <input type='submit' className='bg-[#2f4f4f] cursor-pointer border-2 border-[#3BFE0B] text-[#3BFE0B] text-xl font-bold rounded-lg py-2 w-3/4 tracking-[.15em] hover:bg-transparent' id='disabled' 
+                    <input type='submit' className='bg-[#2f4f4f] cursor-pointer border-2 border-[#3BFE0B] text-[#3BFE0B] text-xl font-bold rounded-lg py-2 w-full xl:w-3/4 tracking-[.15em] hover:bg-transparent' id='disabled' 
                     value='Enviar mensaje'
                     />
                     <span className='loader hidden bg-transparent h-[50px] w-[50px] animate-[rotate_1s_ease-in-out_infinite] after:rounded-full after:content-[""] after:block after:w-[20px] after:h-[20px] before:rounded-full before:content-[""] before:block before:w-[20px] before:h-[20px] before:animate-[ball1_1s_infinite] before:bg-[#ffffff] before:shadow-[30px_0_0_0_#3BFE0B] mb-[10px] after:animate-[ball2_1s_infinite] after:bg-[#3BFE0B] after:shadow-[30px_0_0_0_#ffffff]'></span>
                 </form>
-                <article className='bg-[#2f4f4f] py-8 px-8 rounded-lg flex flex-col items-center justify-between gap-y-8'>
+                <article className='bg-[#2f4f4f] py-8 px-8 rounded-lg hidden xl:flex flex-col items-center justify-between gap-y-8'>
                     <div className='w-full flex flex-col justify-between '>
                         
                         <div className='flex flex-col items-center justify-evenly gap-y-8'>

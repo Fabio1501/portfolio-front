@@ -104,7 +104,7 @@ const NavFixed = () => {
     };
 
     return(
-        <div className="fixed right-10 bottom-8 group">
+        <div className="xl:block fixed right-10 bottom-8 group hidden">
             <div id="speed-dial-menu-default" className="flex flex-col hidden items-center mb-4 space-y-2">
                 <button 
                 onClick={shareSocialRed}

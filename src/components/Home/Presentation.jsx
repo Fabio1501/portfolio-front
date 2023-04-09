@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 const Presentation = ({infoPresentation}) => {
 
     return (
-        <main className='w-1/4 bg-zinc-700/60 p-8 mt-16 mb-16 rounded-lg shadow-[0_20px_25px_-14px_rgba(0,0,0,0.5)]'>
+        <main className='w-full xl:w-1/4 bg-transparent xl:bg-zinc-700/60 px-8 mb-16 mt-8 xl:p-8 xl:mt-16 xl:mb-16 xl:rounded-lg xl:shadow-[0_20px_25px_-14px_rgba(0,0,0,0.5)]'>
             {
                 <img className='h-64 mb-12' src={infoPresentation.image.src} alt = {infoPresentation.image.alt}/>
             }

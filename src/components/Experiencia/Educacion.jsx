@@ -5,7 +5,7 @@ import Footer from '../Footer/Footer'
 import NavBar from '../Navbar/NavBar';
 import LoaderHome from '../Home/LoaderHome';
 
-const Experiencia = () => {
+const Educacion = () => {
     const section = useSelector(state => state.section);
     const dispatch = useDispatch();
 
@@ -13,9 +13,8 @@ const Experiencia = () => {
         dispatch(getSection());
     }, []);
 
-    const customExperiencia = () => {
-        let sectionExperiencia = section?.info?.filter(sec => sec.name === 'experiencia')
-          
+    const customEducacion = () => {
+        let sectionEducacion = section?.info?.filter(sec => sec.name === 'experiencia')
         return {
         
         }
@@ -51,4 +50,4 @@ const Experiencia = () => {
     );
 }
 
-export default Experiencia;
+export default Educacion;
